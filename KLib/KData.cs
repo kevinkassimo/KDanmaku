@@ -19,7 +19,6 @@ namespace KLib {
 		public static void Save(string bf_name, KObject k_obj) {
 			BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Open (Application.persistentDataPath + AddSuffix(bf_name), FileMode.Open);
-
 			bf.Serialize (file, k_obj);
 			file.Close ();
 		}
